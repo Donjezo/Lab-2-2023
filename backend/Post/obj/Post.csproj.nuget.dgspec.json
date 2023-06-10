@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\MedicineApp\\Post\\Post.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Post.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\MedicineApp\\Lab2\\Lab2.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Lab2\\Lab2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\MedicineApp\\Lab2\\Lab2.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Lab2\\Lab2.csproj",
         "projectName": "Lab2",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\MedicineApp\\Lab2\\Lab2.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Lab2\\Lab2.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\MedicineApp\\Lab2\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Lab2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\MedicineApp\\Post\\Post.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Post.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\MedicineApp\\Post\\Post.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Post.csproj",
         "projectName": "Post",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\MedicineApp\\Post\\Post.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Post.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\MedicineApp\\Post\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -111,8 +111,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\MedicineApp\\Lab2\\Lab2.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\MedicineApp\\Lab2\\Lab2.csproj"
+              "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Lab2\\Lab2.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Lab2\\Lab2.csproj"
               }
             }
           }

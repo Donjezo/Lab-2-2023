@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d4pivE/eqKi8HqSd330vo9TYE6B4u8Y0Dz5O94n9gf002CtIXn3i1h5UYS70s1oysBZswDcA6AzAsLQdK4E0qA==",
+  "dgSpecHash": "dPM/14rZMlM64ENFz36WX7NUe1uYk9z/BDLivpQr51Iw8QFeOLdaYOQmt/GohMLCNcBdHa85I+sC2CFY4bq+hQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\MedicineApp\\Lab2\\Lab2.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Lab2\\Lab2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnet.cors\\5.0.0\\microsoft.aspnet.cors.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
