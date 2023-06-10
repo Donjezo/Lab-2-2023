@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import ExtraHeader from "../Header/ExtraHeader";
-
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import AfterLoginPage from "../Contact/afterLoginPage";
 
 const Login = () => {
   const history = useNavigate();
@@ -16,7 +16,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "https://localhost:44314/api/Users/login",
+        "https://localhost:5001/api/Users/login",
         {
           Email: email,
           Password: password,
@@ -27,17 +27,17 @@ const Login = () => {
       setUser({ firstName, lastName });
 
       // Redirect to the dashboard page
-      history("/afterLofinpage");
+      history("/afterLoginPage");
     } catch (error) {
       console.error(error);
     }
   };
 
-  // if (user) {
-  //   return (
-  //     // <AfterLoginPage firstName={user.firstName} lastName={user.lastName} />
-  //   );
-  // }
+  if (user) {
+    return (
+      <AfterLoginPage firstName={user.firstName} lastName={user.lastName} />
+    );
+  }
 
   return (
     <div>

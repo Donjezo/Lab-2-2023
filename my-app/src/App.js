@@ -2,12 +2,11 @@ import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Components/HomeScreen/Home";
-// import Login from "./Components/Login/Login";
+import Home from "./Components/HomeScreen/Home"; import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Contact from "./Components/Contact/Contaxt";
 
-import LoginPage from "./Components/Contact/LoginPage";
+
 import AfterLoginPage from "./Components/Contact/afterLoginPage";
 
 // Import the functions you need from the SDKs you need
@@ -36,7 +35,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/contact" element={<AfterLoginPage />} />
       </Routes>
