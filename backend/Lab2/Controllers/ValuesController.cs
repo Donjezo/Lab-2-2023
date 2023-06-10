@@ -55,37 +55,52 @@ namespace Lab2.Controllers
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("INSERT INTO Users (FirstName, LastName, Password, Email, Fund, Type, Status, CreatedOn) " +
-                                                    "VALUES (@FirstName, @LastName, @Password, @Email, @Fund, @Type, @Status, @CreatedOn)", connection);
-                command.Parameters.AddWithValue("@FirstName", user.FirstName);
-                command.Parameters.AddWithValue("@LastName", user.LastName);
-                command.Parameters.AddWithValue("@Password", user.Password);
-                command.Parameters.AddWithValue("@Email", user.Email);
-                command.Parameters.AddWithValue("@Fund", user.Fund);
-                command.Parameters.AddWithValue("@Type", user.Type);
-                command.Parameters.AddWithValue("@Status", user.Status);
+                // Check if the email already exists in the database
+                SqlCommand checkEmailCommand = new SqlCommand("SELECT COUNT(*) FROM Users WHERE Email = @Email", connection);
+                checkEmailCommand.Parameters.AddWithValue("@Email", user.Email);
+
+                connection.Open();
+                int emailCount = (int)checkEmailCommand.ExecuteScalar();
+
+                if (emailCount > 0)
+                {
+                    return BadRequest("User with the same email already exists.");
+                }
+
+                // Continue with user creation if the email is unique
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO Users (FirstName, LastName, Password, Email, Fund, Type, Status, CreatedOn) " +
+                                                        "VALUES (@FirstName, @LastName, @Password, @Email, @Fund, @Type, @Status, @CreatedOn)", connection);
+                insertCommand.Parameters.AddWithValue("@FirstName", user.FirstName);
+                insertCommand.Parameters.AddWithValue("@LastName", user.LastName);
+                insertCommand.Parameters.AddWithValue("@Password", user.Password);
+                insertCommand.Parameters.AddWithValue("@Email", user.Email);
+                insertCommand.Parameters.AddWithValue("@Fund", user.Fund);
+                insertCommand.Parameters.AddWithValue("@Type", user.Type);
+                insertCommand.Parameters.AddWithValue("@Status", user.Status);
 
                 // Check if CreatedOn value is within the allowed range
                 DateTime createdOn = user.CreatedOn < SqlDateTime.MinValue.Value || user.CreatedOn > SqlDateTime.MaxValue.Value
                     ? DateTime.Now
                     : user.CreatedOn;
 
-                command.Parameters.AddWithValue("@CreatedOn", createdOn);
+                insertCommand.Parameters.AddWithValue("@CreatedOn", createdOn);
 
-                connection.Open();
-                int rowsAffected = command.ExecuteNonQuery();
+                int rowsAffected = insertCommand.ExecuteNonQuery();
                 connection.Close();
 
                 if (rowsAffected > 0)
                 {
-                    return Ok("User created successfully.");
+                    // Return a JSON response instead of a string message
+                    return Ok(new { message = "User created successfully." });
                 }
                 else
                 {
-                    return BadRequest("Failed to create user.");
+                    return BadRequest(new { message = "Failed to create user." });
                 }
             }
         }
+
+
 
 
         [HttpGet("{id}")]
