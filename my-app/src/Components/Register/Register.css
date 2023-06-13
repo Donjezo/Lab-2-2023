@@ -7,9 +7,7 @@
   display: flex;
   font-weight: 400;
   font-family: sans-serif;
-  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-  background-image: url("./hero-bg.jpg");
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 body,

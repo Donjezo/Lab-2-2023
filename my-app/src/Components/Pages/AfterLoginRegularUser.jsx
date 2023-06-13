@@ -1,9 +1,9 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import DashbordHeader from "../Header/DashbordHeader";
 import Footer from "../Footer/Footer";
-import { UserContext } from "../../UserContext";
 import { useNavigate } from "react-router-dom";
-function Dashbord(props) {
+
+function AfterLoginRegularUser(props) {
   const navigate = useNavigate();
   const myValue = localStorage.getItem("userId");
 
@@ -39,12 +39,9 @@ function Dashbord(props) {
       <div className="mb-5">
         <DashbordHeader></DashbordHeader>
       </div>
-      <div>
-        <h3>pershendetje{props.id}</h3>
-        <h3>pershendetje{myValue}</h3>
-      </div>
 
       <div className="mb-5 col-sm-6 col-md-8 col align-self-center container px-4 col-sm-6 col-md-8">
+        <h3>Welcome Admin</h3>
         <table className="table">
           <thead>
             <tr>
@@ -65,7 +62,11 @@ function Dashbord(props) {
                 <td>{user.email}</td>
                 <td>{user.type}</td>
                 <td>
-                  <button type="button" className="btn btn-danger">
+                  <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={() => handleDeleteUser(user.id)}
+                  >
                     Delete
                   </button>
                 </td>
@@ -79,4 +80,4 @@ function Dashbord(props) {
   );
 }
 
-export default Dashbord;
+export default AfterLoginRegularUser;

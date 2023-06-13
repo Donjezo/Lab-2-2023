@@ -56,78 +56,89 @@ const Register = (props) => {
     <div>
       <ExtraHeader></ExtraHeader>
 
-      <div className="App pt-3">
-        <div className="outer pt-3">
-          <div className="bleonaRegister pt-3">
-            <div className="inner pt-3">
-              <form onSubmit={handleSubmit}>
-                <h3>Register</h3>
+      <section id="hero" class="d-flex align-items-center">
+        <div className="App pt-3">
+          <div className="outer pt-3">
+            <div className="bleonaRegister pt-3">
+              <div className="inner pt-3 ">
+                <form onSubmit={handleSubmit}>
+                  <h3 className="mt-4">Register</h3>
 
-                <div className="form-group">
-                  <label>First Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="First name"
-                    name="firstName"
-                    value={state.firstName}
-                    onChange={handleInputChange}
-                  />
-                </div>
+                  <div className="form-group">
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Enter your first name here"
+                      name="firstName"
+                      value={state.firstName}
+                      onChange={handleInputChange}
+                    />
+                  </div>
 
-                <div className="form-group">
-                  <label>Last Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Last name"
-                    name="lastName"
-                    value={state.lastName}
-                    onChange={handleInputChange}
-                  />
-                </div>
+                  <div className="form-group">
+                    <label>Last Name</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Enter your last name here"
+                      name="lastName"
+                      value={state.lastName}
+                      onChange={handleInputChange}
+                    />
+                  </div>
 
-                <div className="form-group">
-                  <label>Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Enter email"
-                    name="email"
-                    value={state.email}
-                    onChange={handleInputChange}
-                  />
-                </div>
+                  <div className="form-group">
+                    <label>Email</label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Enter your email"
+                      name="email"
+                      value={state.email}
+                      onChange={handleInputChange}
+                    />
+                  </div>
 
-                <div className="form-group">
-                  <label>Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    placeholder="Enter password"
-                    name="password"
-                    value={state.password}
-                    onChange={handleInputChange}
-                  />
-                </div>
+                  <div className="form-group">
+                    <label>Password</label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Enter password"
+                      name="password"
+                      value={state.password}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Confirm Password</label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Confirm your password"
+                      name="password"
+                    />
+                  </div>
 
-                <div className="d-grid gap-2 pt-4 ">
-                  <button
-                    type="submit"
-                    className="btn btn-primary  btn-lg btn-block"
-                  >
-                    Register
-                  </button>
-                </div>
+                  <div className="d-grid gap-2 pt-4 ">
+                    <button
+                      type="submit"
+                      className="btn btn-primary  btn-lg btn-block"
+                    >
+                      Register
+                    </button>
+                  </div>
 
-                <p className="forgot-password text-right">
-                  Already registered <a href="/Login">log in?</a>
-                </p>
-              </form>
+                  <p className="forgot-password text-right">
+                    Already registered <a href="/Login">log in?</a>
+                  </p>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

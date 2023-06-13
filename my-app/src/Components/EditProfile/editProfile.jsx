@@ -49,20 +49,16 @@ const EditProfile = () => {
       <div className="container-xl px-4 mt-4">
         <nav className="nav nav-borders">
           <a
-            className="nav-link active ms-0"
-            href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="nav-link  ms-0 active"
+            href="/editProfile"
+            target="__blank"
           >
             Profile
           </a>
-
-          <a
-            className="nav-link"
-            href="https://www.bootdey.com/snippets/view/bs5-profile-security-page"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="nav-link" href="/" target="__blank">
+            Cart
+          </a>
+          <a className="nav-link " href="/editPassword" target="__blank">
             Password
           </a>
         </nav>
