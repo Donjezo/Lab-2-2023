@@ -234,25 +234,26 @@ h1, h2, h3, h4, h5, h6 {
 /**
 * Desktop Navigation 
 */
-.navbar {
+.navbar1 {
+  box-shadow: none;
   padding: 0;
 }
-.navbar ul {
+.navbar1 ul {
   margin: 0;
   padding: 0;
   display: flex;
   list-style: none;
   align-items: center;
 }
-.navbar li {
+.navbar1 li {
   position: relative;
 }
-.navbar > ul > li {
+.navbar1 > ul > li {
   position: relative;
   white-space: nowrap;
   padding: 8px 0 8px 20px;
 }
-.navbar a, .navbar a:focus {
+.navbar1 a, .navbar1 a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -263,16 +264,16 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 2px solid #fff;
   padding: 5px 2px;
 }
-.navbar a i, .navbar a:focus i {
+.navbar1 a i, .navbar1 a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+.navbar1 a:hover, .navbar1 .active, .navbar1 .active:focus, .navbar1 li:hover > a {
   color: #1977cc;
   border-color: #1977cc;
 }
-.navbar .dropdown ul {
+.navbar1 .dropdown ul {
   display: block;
   position: absolute;
   left: 20px;
@@ -286,10 +287,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
-.navbar .dropdown ul li {
+.navbar1 .dropdown ul li {
   min-width: 200px;
 }
-.navbar .dropdown ul a {
+.navbar1 .dropdown ul a {
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
@@ -297,33 +298,33 @@ h1, h2, h3, h4, h5, h6 {
   color: #082744;
   border: none;
 }
-.navbar .dropdown ul a i {
+.navbar1 .dropdown ul a i {
   font-size: 12px;
 }
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+.navbar1 .dropdown ul a:hover, .navbar1 .dropdown ul .active:hover, .navbar1 .dropdown ul li:hover > a {
   color: #1977cc;
 }
-.navbar .dropdown:hover > ul {
+.navbar1 .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
 }
-.navbar .dropdown .dropdown ul {
+.navbar1 .dropdown .dropdown ul {
   top: 0;
   left: calc(100% - 30px);
   visibility: hidden;
 }
-.navbar .dropdown .dropdown:hover > ul {
+.navbar1 .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
   visibility: visible;
 }
 @media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
+  .navbar1 .dropdown .dropdown ul {
     left: -90%;
   }
-  .navbar .dropdown .dropdown:hover > ul {
+  .navbar1 .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -348,11 +349,11 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 
-  .navbar ul {
+  .navbar1 ul {
     display: none;
   }
 }
-.navbar-mobile {
+.navbar1-mobile {
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -363,12 +364,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   z-index: 999;
 }
-.navbar-mobile .mobile-nav-toggle {
+.navbar1-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
   right: 15px;
 }
-.navbar-mobile ul {
+.navbar1-mobile ul {
   display: block;
   position: absolute;
   top: 55px;
@@ -380,22 +381,22 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
   transition: 0.3s;
 }
-.navbar-mobile > ul > li {
+.navbar1-mobile > ul > li {
   padding: 0;
 }
-.navbar-mobile a, .navbar-mobile a:focus {
+.navbar1-mobile a, .navbar1-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
   color: #2c4964;
   border: none;
 }
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+.navbar1-mobile a:hover, .navbar1-mobile .active, .navbar1-mobile li:hover > a {
   color: #1977cc;
 }
-.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+.navbar1-mobile .getstarted, .navbar1-mobile .getstarted:focus {
   margin: 15px;
 }
-.navbar-mobile .dropdown ul {
+.navbar1-mobile .dropdown ul {
   position: static;
   display: none;
   margin: 10px 20px;
@@ -406,19 +407,19 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
-.navbar-mobile .dropdown ul li {
+.navbar1-mobile .dropdown ul li {
   min-width: 200px;
 }
-.navbar-mobile .dropdown ul a {
+.navbar1-mobile .dropdown ul a {
   padding: 10px 20px;
 }
-.navbar-mobile .dropdown ul a i {
+.navbar1-mobile .dropdown ul a i {
   font-size: 12px;
 }
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+.navbar1-mobile .dropdown ul a:hover, .navbar1-mobile .dropdown ul .active:hover, .navbar1-mobile .dropdown ul li:hover > a {
   color: #1977cc;
 }
-.navbar-mobile .dropdown > .dropdown-active {
+.navbar1-mobile .dropdown > .dropdown-active {
   display: block;
 }
 

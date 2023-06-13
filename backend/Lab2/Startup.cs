@@ -33,10 +33,11 @@ namespace Lab2
                 {
                     builder.AllowAnyOrigin()
                            .AllowAnyMethod()
-                           .AllowAnyHeader()
-                           .AllowCredentials();
+                           .AllowAnyHeader();
                 });
             });
+
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

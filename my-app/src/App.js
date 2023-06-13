@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState} from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { UserProvider } from "./UserContext";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Components/HomeScreen/Home"; import Login from "./Components/Login/Login";
+import Home from "./Components/HomeScreen/Home";
+import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
-import Contact from "./Components/Contact/Contaxt";
+import EditProfile from "./Components/EditProfile/editProfile";
+import Dashbord from "./Components/Dashbord/Dashbord";
 
 
 import AfterLoginPage from "./Components/Contact/afterLoginPage";
+
 
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
@@ -30,14 +34,35 @@ import AfterLoginPage from "./Components/Contact/afterLoginPage";
 // // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
+
+
 function App() {
+  const [id, setId] = useState("");
+  console.log(id)
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
+        <Route
+          path="/Login"
+          element={
+            <UserProvider>
+              <Login id={(id) => setId(id)} />
+            </UserProvider>
+          }
+        />
+
+        <Route
+          path="/contact"
+          element={
+            <UserProvider>
+              <Dashbord id={id} setid={(id) => setId(id)} />
+            </UserProvider>
+          }
+        />
+        <Route path="/editProfile" element={<EditProfile id={ id} />}/>
         <Route path="/Register" element={<Register />} />
-        <Route path="/contact" element={<AfterLoginPage />} />
+        <Route path="/afterLoginPage" element={<AfterLoginPage />} />
       </Routes>
     </Router>
   );

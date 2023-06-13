@@ -1,43 +1,50 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../../UserContext";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import ExtraHeader from "../Header/ExtraHeader";
 import axios from "axios";
-import AfterLoginPage from "../Contact/afterLoginPage";
 
-const Login = () => {
-  const history = useNavigate();
-  const [email, setEmail] = useState("");
+const Login = (props) => {
+   const history = useNavigate();
+  
+
+   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
+  
+  
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+   const handleLogin = async (e) => {
+     e.preventDefault();
 
-    try {
-      const response = await axios.post(
-        "https://localhost:5001/api/Users/login",
-        {
-          Email: email,
-          Password: password,
-        }
-      );
+     try {
+       const response = await axios.post(
+         "https://localhost:5001/api/Users/login",
+         {
+           Email: email,
+           Password: password,
+         }
+       );
 
-      const { firstName, lastName } = response.data.user;
-      setUser({ firstName, lastName });
+     
+ 
+       const { firstName, lastName, id } = response.data.user;
+       const user = { firstName, lastName, id };
 
-      // Redirect to the dashboard page
-      history("/afterLoginPage");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+        localStorage.setItem("userId", user.id);
+       console.log(firstName, lastName, id);
+      
+       
+       // Update the user ID in the context
+         props.id(user.id);
 
-  if (user) {
-    return (
-      <AfterLoginPage firstName={user.firstName} lastName={user.lastName} />
-    );
-  }
+       // Redirect to the dashboard page
+       history("/contact");
+     } catch (error) {
+       console.error(error);
+     }
+   };
+
 
   return (
     <div>
