@@ -80,3 +80,44 @@ C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\
 C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.dll
 C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.pdb
 C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.genruntimeconfig.cache
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Lab2.exe
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Lab2.deps.json
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Lab2.runtimeconfig.json
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Lab2.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Lab2.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Lab2.pdb
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\System.Web.Cors.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.RazorAssemblyInfo.cache
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.RazorAssemblyInfo.cs
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.RazorTargetAssemblyInfo.cache
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.csproj.CopyComplete
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.dll
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.pdb
+C:\Users\lenovo\Desktop\E Patient\Lab-2-2023\backend\Lab2\obj\Debug\netcoreapp3.1\Lab2.genruntimeconfig.cache
