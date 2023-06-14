@@ -157,8 +157,7 @@ const EditProfile = () => {
                         className="form-control"
                         id="inputLocation"
                         type="text"
-                        placeholder="Type"
-                        value={userData.userType || ""}
+                        value={userData.type || ""}
                         onChange={(event) =>
                           setUserData({
                             ...userData,

@@ -1,0 +1,9 @@
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.RazorAssemblyInfo.cache
+C:\Users\Admin\Desktop\Epatient\Lab-2-2023\backend\Admin\obj\Debug\net5.0\Admin.RazorAssemblyInfo.cs

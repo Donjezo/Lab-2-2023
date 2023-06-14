@@ -1,19 +1,17 @@
 import { UserContext } from "../../UserContext";
 import { useNavigate } from "react-router-dom";
 
-
 const DashbordHeader = (props) => {
-    const history = useNavigate();
-  
-    function logout() {
-        localStorage.removeItem("userId");
-        history("/login");
-    }
+  const history = useNavigate();
+
+  function logout() {
+    localStorage.removeItem("userId");
+    history("/login");
+  }
 
   return (
     <div>
       <header id="header" class="">
-
         <div class="container d-flex align-items-center">
           <h1 class="logo me-auto">
             <a href="/">E-Patient</a>
@@ -93,11 +91,9 @@ const DashbordHeader = (props) => {
             <i class="lg bi bi-chat me-3 "></i>
           </a>
 
-                  <button onClick={logout}>
-            <a>
-              <i class=" md bi bi-box-arrow-in-right "></i>
-            </a>
-          </button>
+          <a onClick={logout}>
+            <i class=" md bi bi-box-arrow-in-right "></i>
+          </a>
         </div>
       </header>
     </div>

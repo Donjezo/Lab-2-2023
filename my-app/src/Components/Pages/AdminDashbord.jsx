@@ -1,15 +1,13 @@
 import Header from "../Header/Header";
 import "./css/styles.css";
 import { useNavigate } from "react-router-dom";
-const RegularUsers=()=> {
+const AdminDashbord = () => {
   const history = useNavigate();
- 
-   
 
-   function Logout() {
-     localStorage.removeItem("userId");
-     history("/login");
-   }
+  function Logout() {
+    localStorage.removeItem("userId");
+    history("/login");
+  }
 
   return (
     <>
@@ -379,5 +377,5 @@ const RegularUsers=()=> {
       </body>
     </>
   );
-}
-export default RegularUsers;
+};
+export default AdminDashbord;

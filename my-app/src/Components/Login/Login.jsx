@@ -23,8 +23,8 @@ const Login = (props) => {
         }
       );
 
-      const { firstName, lastName, id,type } = response.data.user;
-      const user = { firstName, lastName, id ,type};
+      const { firstName, lastName, id, type } = response.data.user;
+      const user = { firstName, lastName, id, type };
 
       localStorage.setItem("userId", user.id);
       console.log(firstName, lastName, id);
@@ -33,10 +33,10 @@ const Login = (props) => {
       props.id(user.id);
 
       // Redirect to the dashboard page
-      if (user.type === "Regular") {
-        history("/regularUsers");
-      } else {
+      if (user.type === "admin") {
         history("/AdminDashbord");
+      } else {
+        history("/regularUsers");
       }
     } catch (error) {
       console.error(error);
