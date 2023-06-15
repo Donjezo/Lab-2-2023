@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Register.css";
 import ExtraHeader from "../Header/ExtraHeader";
-
+import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
 const Register = (props) => {
@@ -56,16 +56,15 @@ const Register = (props) => {
     <div>
       <ExtraHeader></ExtraHeader>
 
-      <section id="hero" class="d-flex align-items-center">
-        <div className="App pt-3">
-          <div className="outer pt-3">
-            <div className="bleonaRegister pt-3">
-              <div className="inner pt-3 ">
-                <form onSubmit={handleSubmit}>
-                  <h3 className="mt-4">Register</h3>
+      <section id="hero" class="mt-10 d-flex align-items-center">
+        <div className="App pt-5">
+          <div className="outer pt-5">
+            <div className="bleonaRegister">
+              <div className="inner  ">
+                <form onSubmit={handleSubmit} className="">
+                  <h3 className="">Register</h3>
 
                   <div className="form-group">
-                    <label>First Name</label>
                     <input
                       type="text"
                       className="form-control"
@@ -74,10 +73,10 @@ const Register = (props) => {
                       value={state.firstName}
                       onChange={handleInputChange}
                     />
+                    <label></label>
                   </div>
 
                   <div className="form-group">
-                    <label>Last Name</label>
                     <input
                       type="text"
                       className="form-control"
@@ -86,10 +85,10 @@ const Register = (props) => {
                       value={state.lastName}
                       onChange={handleInputChange}
                     />
+                    <label></label>
                   </div>
 
                   <div className="form-group">
-                    <label>Email</label>
                     <input
                       type="email"
                       className="form-control"
@@ -98,10 +97,10 @@ const Register = (props) => {
                       value={state.email}
                       onChange={handleInputChange}
                     />
+                    <label></label>
                   </div>
 
                   <div className="form-group">
-                    <label>Password</label>
                     <input
                       type="password"
                       className="form-control"
@@ -110,15 +109,32 @@ const Register = (props) => {
                       value={state.password}
                       onChange={handleInputChange}
                     />
+                    <label></label>
                   </div>
                   <div className="form-group">
-                    <label>Confirm Password</label>
                     <input
                       type="password"
                       className="form-control"
                       placeholder="Confirm your password"
                       name="password"
                     />
+                    <label></label>
+                  </div>
+                  <div className="form-group">
+                    <div className="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        className="custom-control-input"
+                        id="customCheck1"
+                      />
+                      <label
+                        className="custom-control-label"
+                        htmlFor="customCheck1"
+                      >
+                        Remember me
+                      </label>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
                   </div>
 
                   <div className="d-grid gap-2 pt-4 ">

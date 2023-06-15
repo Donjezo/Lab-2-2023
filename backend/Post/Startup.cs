@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace Post
 {
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -25,6 +26,19 @@ namespace Post
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Add CORS services
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -38,12 +52,8 @@ namespace Post
 
             app.UseRouting();
 
-            app.UseCors(builder =>
-            {
-                builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
-            });
+            // Enable CORS
+            app.UseCors();
 
             app.UseAuthorization();
 

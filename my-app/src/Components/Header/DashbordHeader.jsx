@@ -45,7 +45,7 @@ const DashbordHeader = (props) => {
 
               <li>
                 <a class="nav-link scrollto" href="#departments">
-                  Grupet
+                  My Posts
                 </a>
               </li>
               <li>

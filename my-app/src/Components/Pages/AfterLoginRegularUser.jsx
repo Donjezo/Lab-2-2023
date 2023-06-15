@@ -1,38 +1,24 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import DashbordHeader from "../Header/DashbordHeader";
 import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./css/afterLoginRegularUser.css";
 
 function AfterLoginRegularUser(props) {
-  const navigate = useNavigate();
-  const myValue = localStorage.getItem("userId");
+  const [postContent, setPostContent] = useState("");
 
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    fetch("https://localhost:5001/api/User")
-      .then((response) => response.json())
-      .then((data) => setUsers(data))
-      .catch((error) => console.log(error));
-  }, []);
-
-  const handleDeleteUser = (userId) => {
-    fetch(`https://localhost:5001/api/User/${userId}`, {
-      method: "DELETE",
-    })
+  function createPost() {
+    axios
+      .post("https://localhost:5008/api/Postimet", { content: postContent })
       .then((response) => {
-        if (response.ok) {
-          // User successfully deleted, update the users state
-          setUsers(users.filter((user) => user.id !== userId));
-        } else {
-          // Handle error response
-          console.log("Failed to delete user.");
-        }
+        console.log("Post created:", response.data);
+        setPostContent("");
       })
       .catch((error) => {
-        console.log(error);
+        console.error("Error creating post:", error);
       });
-  };
+  }
 
   return (
     <div>
@@ -40,40 +26,56 @@ function AfterLoginRegularUser(props) {
         <DashbordHeader></DashbordHeader>
       </div>
 
-      <div className="mb-5 col-sm-6 col-md-8 col align-self-center container px-4 col-sm-6 col-md-8">
-        <h3>Welcome Admin</h3>
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">id</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">email</th>
-              <th scope="col">Role</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user) => (
-              <tr key={user.id}>
-                <th>{user.id}</th>
-                <td>{user.firstName}</td>
-                <td>{user.lastName}</td>
-                <td>{user.email}</td>
-                <td>{user.type}</td>
-                <td>
-                  <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={() => handleDeleteUser(user.id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="text-center me-14">
+        <div class="text-center container bootstrap snippets bootdey">
+          <div class="">
+            <div class="">
+              <div class="well well-sm well-social-post">
+                <form>
+                  <ul class="list-inline" id="list_PostActions">
+                    <li class="active">
+                      <a href="#">Update status</a>
+                    </li>
+                    <li>
+                      <a href="#">Add photos/Video</a>
+                    </li>
+                    <li>
+                      <a href="#">Create photo album</a>
+                    </li>
+                  </ul>
+                  <textarea
+                    class="form-control"
+                    placeholder="What's in your mind?"
+                    value={postContent}
+                    onChange={(event) => setPostContent(event.target.value)}
+                  ></textarea>
+                  <ul class="list-inline post-actions">
+                    <li>
+                      <a href="#">
+                        <span class="glyphicon glyphicon-camera"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="glyphicon glyphicon-user"></a>
+                    </li>
+                    <li>
+                      <a href="#" class="glyphicon glyphicon-map-marker"></a>
+                    </li>
+                    <li class="pull-right">
+                      <a
+                        href="#"
+                        class="btn btn-primary btn-xs"
+                        onClick={createPost}
+                      >
+                        Post
+                      </a>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer className="navbar"></Footer>
     </div>

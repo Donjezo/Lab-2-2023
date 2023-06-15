@@ -7858,9 +7858,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Post.csproj",
-      "projectName": "Post",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Post.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Postimet.csproj",
+      "projectName": "Postimet",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Postimet.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\obj\\",
       "projectStyle": "PackageReference",

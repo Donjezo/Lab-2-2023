@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y5EwCcxU17U1Y2Qn0UTClaAusHogiVS7qZt51KxoXv1JK28GicYPignRL5jSWoIZqVxNfCc6FhMc/k7xM7g5LQ==",
+  "dgSpecHash": "tTplTPC/+oMKpMf7asvZrQ1CYnZsAUkSu4rU8fNm/YKvk0v7S+oMHBl5DV9MLP8cZHcRtZnAqjU7W/CloEXXFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Post.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Epatient\\Lab-2-2023\\backend\\Post\\Postimet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnet.cors\\5.0.0\\microsoft.aspnet.cors.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
