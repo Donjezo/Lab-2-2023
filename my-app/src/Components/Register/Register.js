@@ -157,6 +157,6 @@ const Register = (props) => {
       </section>
     </div>
   );
-};
+}
 
 export default Register;
