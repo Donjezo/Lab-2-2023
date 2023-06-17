@@ -165,6 +165,11 @@ const AllUsersTable = () => {
                     data-bs-parent="#sidenavAccordion"
                   >
                     <nav class="sb-sidenav-menu-nested nav">
+                      <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="/Medicine">
+                          Medicines
+                        </a>
+                      </nav>
                       <a class="nav-link" href="layout-static.html">
                         Add Medicine
                       </a>

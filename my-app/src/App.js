@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 import { UserProvider } from "./UserContext";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -16,6 +16,10 @@ import AllUsersTable from "./Components/Pages/allUsersTable";
 import AllAdminsTable from "./Components/Pages/AllAdmins";
 import AllDoctorsTable from "./Components/Pages/AllDoctors";
 import EditProfileAdmin from "./Components/EditProfile/editProfileAdmin";
+import Medicine from "./Components/Pages/Medicine";
+import EditPasswordAdmin from "./Components/EditProfile/editPasswordAdmin";
+import MedicineRegularUsers from "./Components/Pages/MedicineRegularUsers";
+import UserPost from "./Components/Pages/userPosts";
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
@@ -45,6 +49,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
+
         <Route
           path="/Login"
           element={
@@ -59,6 +64,16 @@ function App() {
           element={<AfterLoginRegularUser></AfterLoginRegularUser>}
         />
         <Route
+          path="/MyPosts"
+          element={<UserPost></UserPost>}
+        />
+        <Route
+          path="/MedicineRegularUsers"
+          element={<MedicineRegularUsers />}
+        />
+        <Route path="/Dashbord" element={<AdminDashbord />} />
+        <Route path="/Medicine" element={<Medicine />} />
+        <Route
           path="/allAdminTable"
           element={<AllAdminsTable></AllAdminsTable>}
         ></Route>
@@ -71,6 +86,7 @@ function App() {
           element={<AllUsersTable></AllUsersTable>}
         />
         <Route path="/editProfileAdmin" element={<EditProfileAdmin />} />
+        <Route path="/editPasswordAdmin" element={<EditPasswordAdmin />} />
         <Route path="/AdminDashbord" element={<AdminDashbord />} />
         <Route path="/editProfile" element={<EditProfile id={id} />} />
         <Route path="/editPassword" element={<EditPassword />} />

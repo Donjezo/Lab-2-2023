@@ -45,20 +45,17 @@ const EditProfile = () => {
   };
   return (
     <>
-   
       <div className="container-xl px-4 mt-4">
         <nav className="nav nav-borders">
           <a
             className="nav-link  ms-0 active"
-            href="/editProfile"
+            href="/editProfileAdmin"
             target="__blank"
           >
             Profile
           </a>
-          <a className="nav-link" href="/" target="__blank">
-            Cart
-          </a>
-          <a className="nav-link " href="/editPassword" target="__blank">
+          
+          <a className="nav-link " href="/editPasswordAdmin" target="__blank">
             Password
           </a>
         </nav>
@@ -225,6 +222,9 @@ const EditProfile = () => {
             </div>
           </div>
         </div>
+        <a href="/Dashbord" className="btn btn-primary" type="button">
+          Go to Dashbord
+        </a>
       </div>
     </>
   );

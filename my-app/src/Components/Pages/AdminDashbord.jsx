@@ -17,14 +17,6 @@ const AdminDashbord = () => {
             E-Patient, Welcome Admin!
           </a>
 
-          <button
-            class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
-            id="sidebarToggle"
-            href="#!"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-
           <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
               <input
@@ -83,7 +75,7 @@ const AdminDashbord = () => {
           </ul>
         </nav>
         <div id="layoutSidenav">
-          <div id="layoutSidenav_nav">
+          <div id="layoutSidenav_nav me-8">
             <nav
               class="sb-sidenav accordion sb-sidenav-dark"
               id="sidenavAccordion"
@@ -91,12 +83,31 @@ const AdminDashbord = () => {
               <div class="sb-sidenav-menu">
                 <div class="nav">
                   <div class="sb-sidenav-menu-heading">Users</div>
+                  <a class="nav-link" href="/Dashbord">
+                    <div class="sb-nav-link-icon">
+                      <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    Dashbord
+                  </a>
                   <a class="nav-link" href="/allUsersTable">
                     <div class="sb-nav-link-icon">
                       <i class="fas fa-tachometer-alt"></i>
                     </div>
                     All Users
                   </a>
+                  <a class="nav-link" href="/allDoctorTable">
+                    <div class="sb-nav-link-icon">
+                      <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    Doctors
+                  </a>
+                  <a class="nav-link" href="/allAdminTable">
+                    <div class="sb-nav-link-icon">
+                      <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    Admin
+                  </a>
+
                   <div class="sb-sidenav-menu-heading">Interface</div>
                   <a
                     class="nav-link collapsed"
@@ -109,7 +120,7 @@ const AdminDashbord = () => {
                     <div class="sb-nav-link-icon">
                       <i class="fas fa-columns"></i>
                     </div>
-                    Layouts
+                    Barrna/Medicine
                     <div class="sb-sidenav-collapse-arrow">
                       <i class="fas fa-angle-down"></i>
                     </div>
@@ -121,11 +132,13 @@ const AdminDashbord = () => {
                     data-bs-parent="#sidenavAccordion"
                   >
                     <nav class="sb-sidenav-menu-nested nav">
-                      <a class="nav-link" href="layout-static.html">
-                        Static Navigation
+                      <a class="nav-link" href="/Medicine">
+                        Medicines
                       </a>
-                      <a class="nav-link" href="layout-sidenav-light.html">
-                        Light Sidenav
+                    </nav>
+                    <nav class="sb-sidenav-menu-nested nav">
+                      <a class="nav-link" href="/Medicine">
+                        Add Medicine
                       </a>
                     </nav>
                   </div>
@@ -140,103 +153,26 @@ const AdminDashbord = () => {
                     <div class="sb-nav-link-icon">
                       <i class="fas fa-book-open"></i>
                     </div>
-                    Pages
+                    Add Admin/Doctorr
                     <div class="sb-sidenav-collapse-arrow">
                       <i class="fas fa-angle-down"></i>
                     </div>
                   </a>
-                  <div
-                    class="collapse"
-                    id="collapsePages"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#sidenavAccordion"
-                  >
-                    <nav
-                      class="sb-sidenav-menu-nested nav accordion"
-                      id="sidenavAccordionPages"
-                    >
-                      <a
-                        class="nav-link collapsed"
-                        href="#"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#pagesCollapseAuth"
-                        aria-expanded="false"
-                        aria-controls="pagesCollapseAuth"
-                      >
-                        Authentication
-                        <div class="sb-sidenav-collapse-arrow">
-                          <i class="fas fa-angle-down"></i>
-                        </div>
-                      </a>
-                      <div
-                        class="collapse"
-                        id="pagesCollapseAuth"
-                        aria-labelledby="headingOne"
-                        data-bs-parent="#sidenavAccordionPages"
-                      >
-                        <nav class="sb-sidenav-menu-nested nav">
-                          <a class="nav-link" href="login.html">
-                            Login
-                          </a>
-                          <a class="nav-link" href="register.html">
-                            Register
-                          </a>
-                          <a class="nav-link" href="password.html">
-                            Forgot Password
-                          </a>
-                        </nav>
-                      </div>
-                      <a
-                        class="nav-link collapsed"
-                        href="#"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#pagesCollapseError"
-                        aria-expanded="false"
-                        aria-controls="pagesCollapseError"
-                      >
-                        Error
-                        <div class="sb-sidenav-collapse-arrow">
-                          <i class="fas fa-angle-down"></i>
-                        </div>
-                      </a>
-                      <div
-                        class="collapse"
-                        id="pagesCollapseError"
-                        aria-labelledby="headingOne"
-                        data-bs-parent="#sidenavAccordionPages"
-                      >
-                        <nav class="sb-sidenav-menu-nested nav">
-                          <a class="nav-link" href="401.html">
-                            401 Page
-                          </a>
-                          <a class="nav-link" href="404.html">
-                            404 Page
-                          </a>
-                          <a class="nav-link" href="500.html">
-                            500 Page
-                          </a>
-                        </nav>
-                      </div>
-                    </nav>
-                  </div>
-                  <div class="sb-sidenav-menu-heading">Addons</div>
-                  <a class="nav-link" href="charts.html">
+
+                  <div class="sb-sidenav-menu-heading">My Profile</div>
+                  <a class="nav-link" href="/editProfileAdmin">
                     <div class="sb-nav-link-icon">
                       <i class="fas fa-chart-area"></i>
                     </div>
-                    Charts
+                    Edit Profile
                   </a>
-                  <a class="nav-link" href="tables.html">
+                  <a class="nav-link" href="/editPasswordAdmin">
                     <div class="sb-nav-link-icon">
                       <i class="fas fa-table"></i>
                     </div>
-                    Tables
+                    Edit Password
                   </a>
                 </div>
-              </div>
-              <div class="sb-sidenav-footer">
-                <div class="small">Logged in as:</div>
-                Start Bootstrap
               </div>
             </nav>
           </div>
@@ -342,20 +278,6 @@ const AdminDashbord = () => {
                 </div>
               </div>
             </main>
-            <footer class="py-4 bg-light mt-auto">
-              <div class="container-fluid px-4">
-                <div class="d-flex align-items-center justify-content-between small">
-                  <div class="text-muted">
-                    Copyright &copy; Your Website 2023
-                  </div>
-                  <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
-                  </div>
-                </div>
-              </div>
-            </footer>
           </div>
         </div>
         <script

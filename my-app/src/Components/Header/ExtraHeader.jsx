@@ -1,7 +1,7 @@
 const ExtraHeader =()=>{
     return(
         <div>
-            <header id="extraheader" class="fixed-top">
+            <header id="extraheader" class="">
         <div class="container d-flex align-items-center">
           <h1 class="logo me-auto">
             <a href="/">E-Patient</a>

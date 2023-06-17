@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditUserData", "..\EditUser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin", "..\Admin\Admin.csproj", "{3135A316-5079-4C62-9573-6A83CE10B1F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostimetFinale", "..\PostimetFinale\PostimetFinale.csproj", "{F44AAA8A-CD1F-41DC-82F9-5B48C97E0CD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostimetFinale", "..\PostimetFinale\PostimetFinale.csproj", "{F44AAA8A-CD1F-41DC-82F9-5B48C97E0CD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

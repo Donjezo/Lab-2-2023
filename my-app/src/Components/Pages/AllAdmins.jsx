@@ -48,14 +48,6 @@ const AllAdminsTable = () => {
             E-Patient, Welcome Admin!
           </a>
 
-          <button
-            class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
-            id="sidebarToggle"
-            href="#!"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-
           <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
               <input
@@ -105,11 +97,9 @@ const AllAdminsTable = () => {
                   <hr class="dropdown-divider" />
                 </li>
                 <li>
-                  
-                    <a onClick={Logout} class="dropdown-item">
-                      Logout
-                    </a>
-                  
+                  <a onClick={Logout} class="dropdown-item">
+                    Logout
+                  </a>
                 </li>
               </ul>
             </li>
@@ -124,6 +114,12 @@ const AllAdminsTable = () => {
               <div class="sb-sidenav-menu">
                 <div class="nav">
                   <div class="sb-sidenav-menu-heading">Users</div>
+                  <a class="nav-link" href="/Dashbord">
+                    <div class="sb-nav-link-icon">
+                      <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    Dashbord
+                  </a>
                   <a class="nav-link" href="/allUsersTable">
                     <div class="sb-nav-link-icon">
                       <i class="fas fa-tachometer-alt"></i>
@@ -167,6 +163,11 @@ const AllAdminsTable = () => {
                     data-bs-parent="#sidenavAccordion"
                   >
                     <nav class="sb-sidenav-menu-nested nav">
+                      <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="/Medicine">
+                          Medicines
+                        </a>
+                      </nav>
                       <a class="nav-link" href="layout-static.html">
                         Add Medicine
                       </a>
@@ -252,20 +253,6 @@ const AllAdminsTable = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div id="layoutSidenav_content">
-            <footer class="py-4 bg-light mt-auto">
-              <div class="container-fluid px-4">
-                <div class="d-flex align-items-center justify-content-between small">
-                  <div class="text-muted">Copyright &copy; Lab2 2023</div>
-                  <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
-                  </div>
-                </div>
-              </div>
-            </footer>
           </div>
         </div>
 

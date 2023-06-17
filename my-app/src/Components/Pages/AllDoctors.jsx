@@ -105,11 +105,9 @@ const AllDoctorsTable = () => {
                   <hr class="dropdown-divider" />
                 </li>
                 <li>
-                  
-                    <a onClick={Logout} class="dropdown-item">
-                      Logout
-                    </a>
-                 
+                  <a onClick={Logout} class="dropdown-item">
+                    Logout
+                  </a>
                 </li>
               </ul>
             </li>
@@ -167,6 +165,11 @@ const AllDoctorsTable = () => {
                     data-bs-parent="#sidenavAccordion"
                   >
                     <nav class="sb-sidenav-menu-nested nav">
+                      <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="/Medicine">
+                          Medicines
+                        </a>
+                      </nav>
                       <a class="nav-link" href="layout-static.html">
                         Add Medicine
                       </a>

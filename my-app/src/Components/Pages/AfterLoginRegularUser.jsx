@@ -4,16 +4,26 @@ import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./css/afterLoginRegularUser.css";
+import AllPosts from "./AllPosts";
 
 function AfterLoginRegularUser(props) {
   const [postContent, setPostContent] = useState("");
+  const [posts, setPosts] = useState([]);
 
+  
   function createPost() {
     axios
-      .post("https://localhost:5008/api/Postimet", { content: postContent })
+      .post("https://localhost:5008/api/Postimet", {
+        autorId: 1,
+        autorName: "John Doe",
+        title: "First Post",
+        content: postContent,
+        likes: 10,
+      })
       .then((response) => {
         console.log("Post created:", response.data);
         setPostContent("");
+        setPosts((prevPosts) => [...prevPosts, response.data]);
       })
       .catch((error) => {
         console.error("Error creating post:", error);
@@ -26,14 +36,16 @@ function AfterLoginRegularUser(props) {
         <DashbordHeader></DashbordHeader>
       </div>
 
+      {/* Create Post Form */}
       <div className="text-center me-14">
-        <div class="text-center container bootstrap snippets bootdey">
-          <div class="">
-            <div class="">
-              <div class="well well-sm well-social-post">
+        <div className="text-center container bootstrap snippets bootdey">
+          <div className="">
+            <div className="">
+              <div className="well well-sm well-social-post">
                 <form>
-                  <ul class="list-inline" id="list_PostActions">
-                    <li class="active">
+                  {/* Post Actions */}
+                  <ul className="list-inline" id="list_PostActions">
+                    <li className="active">
                       <a href="#">Update status</a>
                     </li>
                     <li>
@@ -43,28 +55,30 @@ function AfterLoginRegularUser(props) {
                       <a href="#">Create photo album</a>
                     </li>
                   </ul>
+                  {/* Post Content */}
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     placeholder="What's in your mind?"
                     value={postContent}
                     onChange={(event) => setPostContent(event.target.value)}
                   ></textarea>
-                  <ul class="list-inline post-actions">
+                  {/* Post Actions */}
+                  <ul className="list-inline post-actions">
                     <li>
                       <a href="#">
-                        <span class="glyphicon glyphicon-camera"></span>
+                        <span className="glyphicon glyphicon-camera"></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="glyphicon glyphicon-user"></a>
+                      <a href="#" className="glyphicon glyphicon-user"></a>
                     </li>
                     <li>
-                      <a href="#" class="glyphicon glyphicon-map-marker"></a>
+                      <a href="#" className="glyphicon glyphicon-map-marker"></a>
                     </li>
-                    <li class="pull-right">
+                    <li className="pull-right">
                       <a
                         href="#"
-                        class="btn btn-primary btn-xs"
+                        className="btn btn-primary btn-xs"
                         onClick={createPost}
                       >
                         Post
@@ -77,7 +91,9 @@ function AfterLoginRegularUser(props) {
           </div>
         </div>
       </div>
-      <Footer className="navbar"></Footer>
+
+     <AllPosts></AllPosts>
+      <Footer></Footer>
     </div>
   );
 }

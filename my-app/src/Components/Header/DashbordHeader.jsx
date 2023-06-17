@@ -44,12 +44,12 @@ const DashbordHeader = (props) => {
               </li>
 
               <li>
-                <a class="nav-link scrollto" href="#departments">
+                <a class="nav-link scrollto" href="/MyPosts">
                   My Posts
                 </a>
               </li>
               <li>
-                <a class="nav-link scrollto" href="#doctors">
+                <a class="nav-link scrollto" href="/MedicineRegularUsers">
                   Barrnat
                 </a>
               </li>
