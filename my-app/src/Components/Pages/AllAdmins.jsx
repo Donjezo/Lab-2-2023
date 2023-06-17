@@ -7,6 +7,10 @@ const AllAdminsTable = () => {
   const history = useNavigate();
   const navigate = useNavigate();
   const myValue = localStorage.getItem("userId");
+  //comennt
+  //const history = useNavigate();
+  //const navigate = useNavigate();
+  //const myValue = localStorage.getItem("userId");
 
   const [users, setUsers] = useState([]);
 

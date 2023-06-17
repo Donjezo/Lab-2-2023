@@ -25,8 +25,12 @@ const LoginPage = () => {
       setUser({ firstName, lastName });
 
       // Redirect to the dashboard page
+      //coment
+
+
       history("/afterLoginPage");
     } catch (error) {
+      //comment
       console.error(error);
     }
   };
