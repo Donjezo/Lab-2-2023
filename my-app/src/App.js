@@ -20,6 +20,7 @@ import Medicine from "./Components/Pages/Medicine";
 import EditPasswordAdmin from "./Components/EditProfile/editPasswordAdmin";
 import MedicineRegularUsers from "./Components/Pages/MedicineRegularUsers";
 import UserPost from "./Components/Pages/userPosts";
+import AddAdmin from "./Components/Pages/AddAdmin";
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
@@ -59,32 +60,18 @@ function App() {
           }
         />
 
-        <Route
-          path="/regularUsers"
-          element={<AfterLoginRegularUser></AfterLoginRegularUser>}
-        />
-        <Route
-          path="/MyPosts"
-          element={<UserPost></UserPost>}
-        />
+        <Route path="/regularUsers" element={<AfterLoginRegularUser />} />
+        <Route path="/MyPosts" element={<UserPost />} />
         <Route
           path="/MedicineRegularUsers"
           element={<MedicineRegularUsers />}
         />
+        <Route path="/AddAdmin" element={<AddAdmin />} />
         <Route path="/Dashbord" element={<AdminDashbord />} />
         <Route path="/Medicine" element={<Medicine />} />
-        <Route
-          path="/allAdminTable"
-          element={<AllAdminsTable></AllAdminsTable>}
-        ></Route>
-        <Route
-          path="/allDoctorTable"
-          element={<AllDoctorsTable></AllDoctorsTable>}
-        ></Route>
-        <Route
-          path="/allUsersTable"
-          element={<AllUsersTable></AllUsersTable>}
-        />
+        <Route path="/allAdminTable" element={<AllAdminsTable />}></Route>
+        <Route path="/allDoctorTable" element={<AllDoctorsTable />}></Route>
+        <Route path="/allUsersTable" element={<AllUsersTable />} />
         <Route path="/editProfileAdmin" element={<EditProfileAdmin />} />
         <Route path="/editPasswordAdmin" element={<EditPasswordAdmin />} />
         <Route path="/AdminDashbord" element={<AdminDashbord />} />

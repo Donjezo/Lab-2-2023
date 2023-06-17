@@ -22,11 +22,16 @@ const Login = (props) => {
           Password: password,
         }
       );
+      console.log(response);
 
-      const { firstName, lastName, id, type } = response.data.user;
+      const { firstName, lastName, id, type,  } = response.data.user;
       const user = { firstName, lastName, id, type };
 
       localStorage.setItem("userId", user.id);
+      localStorage.setItem("Name", user.firstName);
+      localStorage.setItem("Surname", user.lastName);
+       localStorage.setItem("Email", response.data.user.email);
+
       console.log(firstName, lastName, id);
 
       // Update the user ID in the context

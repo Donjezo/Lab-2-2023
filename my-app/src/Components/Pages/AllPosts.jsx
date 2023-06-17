@@ -29,6 +29,7 @@ const AllPosts = () => {
 
   return (
     <div className="mx-5 ">
+     
       {posts.map((post) => (
         <MDBCard key={post.id} className="mb-8 p-3 mb-2 rounded-5 ">
           <MDBCardHeader className=" ">{post.autorName}</MDBCardHeader>
@@ -50,6 +51,7 @@ const AllPosts = () => {
           </MDBCardBody>
         </MDBCard>
       ))}
+      <div></div>
     </div>
   );
 };

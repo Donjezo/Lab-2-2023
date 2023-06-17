@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const DashbordHeader = (props) => {
   const history = useNavigate();
+  const name = localStorage.getItem("Name");
 
   function logout() {
     localStorage.removeItem("userId");
@@ -38,7 +39,7 @@ const DashbordHeader = (props) => {
           <nav id="navbar1" class="navbar1 order-last order-lg-0">
             <ul>
               <li>
-                <a class="nav-link scrollto active" href="#hero">
+                <a class="nav-link scrollto " href="/regularUsers">
                   Home
                 </a>
               </li>

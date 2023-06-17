@@ -25,6 +25,19 @@ namespace PostimetFinale.Controllers
             return await _context.Postimet.ToListAsync();
         }
 
+        [HttpGet("ByAuthor/{authorId}")]
+        public async Task<ActionResult<IEnumerable<Postimet>>> GetPostimetByAuthor(int authorId)
+        {
+            var postimet = await _context.Postimet.Where(p => p.AutorId == authorId).ToListAsync();
+
+            if (postimet == null || postimet.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return postimet;
+        }
+
         // GET: api/Postimet/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Postimet>> GetPostimet(int id)

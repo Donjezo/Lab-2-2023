@@ -7,6 +7,8 @@ import {
   MDBCardHeader,
   MDBCardBody,
   MDBCardText,
+  MDBCol,
+  MDBRow,
 } from "mdb-react-ui-kit";
 
 const UserPost = () => {
@@ -16,45 +18,71 @@ const UserPost = () => {
   useEffect(() => {
     // Fetch posts from the API
     axios
-      .get("https://localhost:5008/api/Postimet")
+      .get(`https://localhost:5008/api/Postimet/ByAuthor/${myValue}`)
       .then((response) => {
         console.log("Posts retrieved:", response.data);
-        // Filter the posts based on userId
-        const filteredPosts = response.data.filter(
-          (post) => post.userId === myValue
-        );
-        setPosts(filteredPosts);
+        setPosts(response.data);
       })
       .catch((error) => {
         console.error("Error retrieving posts:", error);
       });
   }, []);
 
-  return (
-    <div>
-      <div className="mx-5">
-        {posts.map((post) => (
-          <MDBCard key={post.id} className="mb-8 p-3 mb-2 rounded-5">
-            <MDBCardHeader className="">{post.autorName}</MDBCardHeader>
-            <MDBCardBody color="secondary" className="mx-1">
-              <MDBCardText>
-                <h5>{post.title}</h5>
-              </MDBCardText>
-              <MDBCardText>{post.content}</MDBCardText>
+  const handleDeletePost = (postId) => {
+    // Send a DELETE request to the API to delete the post
+    axios
+      .delete(`https://localhost:5008/api/Postimet/${postId}`)
+      .then((response) => {
+        console.log("Post deleted:", postId);
+        // Remove the deleted post from the posts state
+        const updatedPosts = posts.filter((post) => post.id !== postId);
+        setPosts(updatedPosts);
+      })
+      .catch((error) => {
+        console.error("Error deleting post:", error);
+      });
+  };
 
-              <div className="d-inline">
-                <i class="d-inline bi bi-hand-thumbs-up me-2 text-primary"></i>
-                <h6 className="d-inline me-4 text-primary">{post.likes}</h6>
-                <i class="d-inline bi bi-hand-thumbs-down me-4"></i>
-                <i class="bi bi-arrow-90deg-up me-5"> share</i>
-                <i class="bi bi-chat-left-text-fill me-5 top-50 start-50">
-                  Coments
-                </i>
-              </div>
-            </MDBCardBody>
-          </MDBCard>
-        ))}
-      </div>
+  return (
+    <div className="mb-5">
+      <DashbordHeader></DashbordHeader>
+      <MDBRow>
+        <MDBCol md="2"></MDBCol>
+        <MDBCol md="8">
+          {" "}
+          <div className=" m-5 ">
+            {posts.map((post) => (
+              <MDBCard key={post.id} className="mb-8 p-3 mb-2 rounded-5 ">
+                <MDBCardHeader>{post.autorName}</MDBCardHeader>
+                <MDBCardBody color="secondary" className="mx-1">
+                  <MDBCardText>
+                    <h5>{post.title}</h5>
+                  </MDBCardText>
+                  <MDBCardText>{post.content}</MDBCardText>
+
+                  <div className="d-inline">
+                    <i className="d-inline bi bi-hand-thumbs-up me-2 text-primary"></i>
+                    <h6 className="d-inline me-4 text-primary">{post.likes}</h6>
+                    <i className="d-inline bi bi-hand-thumbs-down me-4"></i>
+                    <i className="bi bi-arrow-90deg-up me-5"> share</i>
+                    <i className="bi bi-chat-left-text-fill me-5 top-50 start-50">
+                      Coments
+                    </i>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => handleDeletePost(post.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </MDBCardBody>
+              </MDBCard>
+            ))}
+          </div>
+        </MDBCol>
+        <MDBCol md="2"></MDBCol>
+      </MDBRow>
+      
     </div>
   );
 };

@@ -1803,6 +1803,7 @@ progress {
   vertical-align: top;
   border-color: var(--bs-table-border-color);
 }
+
 .table > :not(caption) > * > *,
 .datatable-table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;

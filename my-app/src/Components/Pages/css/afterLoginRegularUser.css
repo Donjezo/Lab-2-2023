@@ -1,10 +1,13 @@
-	                body{margin-top:20px; background-color: #eeeeee;}
-
+	                
+                   
+                   body{margin-top:20px;   background:#f8f8f8}
 .well-social-post {
     border-radius: 0;
-    background-color: #ffffff;
+    background-color: #ddd;
     border: 1px solid #ddd;
     padding:0;
+    border-radius: 5px;
+    margin-left: 0px;
 }
 
 .well-social-post .glyphicon,
@@ -14,7 +17,13 @@
     font-weight: bold;
     color: #999999;
 }
-
+#list_PostActions li{
+   
+   display: inline-block;
+   margin-left: 5px;
+  margin-right:1px ; 
+  
+}
 .well-social-post a,
 .well-social-post a:hover,
 .well-social-post a:active,
