@@ -3,7 +3,7 @@ import ExtraHeader from "../Header/ExtraHeader";
 import Footer from "../Footer/Footer";
 import DonjetaImage from "../Images/Donjeta.jpg";
 import BleonaImage from "../Images/Bleona.jpg";
-import GresaImage from "../Images/Gresa.jpg";
+import BardhaImage from "../AfterLogin/bardh.jpg";
 
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 const Home = () => {
@@ -1080,8 +1080,8 @@ const Home = () => {
             <div className="col-md-6 col-lg-4">
               <div className="card bg-light">
                 <div className="card-body text-center">
-                  <img
-                    
+                   <img
+                    src={BardhaImage}
                     className="rounded-circle mb-3 mt-3"
                     alt=""
                   />

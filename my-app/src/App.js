@@ -21,6 +21,10 @@ import EditPasswordAdmin from "./Components/EditProfile/editPasswordAdmin";
 import MedicineRegularUsers from "./Components/Pages/MedicineRegularUsers";
 import UserPost from "./Components/Pages/userPosts";
 import AddAdmin from "./Components/Pages/AddAdmin";
+import Crud from "./Components/Crud/Crud";
+import CrudComponent from "./Components/Crudd/crudd";
+import Crud2 from "./Components/Crud/Crud2";
+
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
@@ -79,6 +83,8 @@ function App() {
         <Route path="/editPassword" element={<EditPassword />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/afterLoginPage" element={<AfterLoginPage />} />
+        <Route path="/crud" element={<Crud />} />
+        <Route path="/crud2" element={<Crud2 />} />
       </Routes>
     </Router>
   );
